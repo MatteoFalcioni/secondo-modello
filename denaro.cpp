@@ -15,7 +15,7 @@ void Person::SetMoney(int S){  //attenzione, SetMoney aumenta di S i soldi, non 
 void Person::Move( Way &direction, int l) {
     int L = l*l; //dim della griglia
     if (direction == Way::Right && x_%l != l-1 ) { x_++; }
-    if (direction == Way::Left && x_&l != 0) { x_--; }
+    if (direction == Way::Left && x_%l != 0) { x_--; }
     if (direction == Way::Up && x_/l != 0) { x_ -= l; }
     if (direction == Way::Down && x_/l != l-1) { x_ += l; }
 }
